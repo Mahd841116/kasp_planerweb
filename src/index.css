@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+/* IRANYekan and Persian Web Typography CDN Imports */
+@font-face {
+  font-family: 'IRANYekan';
+  font-style: normal;
+  font-weight: 300;
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/iranyekan-font@v3.0.0/dist/woff2/IRANYekanWebLight.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/rastikerdar/iranyekan-font@v3.0.0/dist/woff/IRANYekanWebLight.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/iranyekan-font@v3.0.0/dist/woff2/IRANYekanWebRegular.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/rastikerdar/iranyekan-font@v3.0.0/dist/woff/IRANYekanWebRegular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/iranyekan-font@v3.0.0/dist/woff2/IRANYekanWebMedium.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/rastikerdar/iranyekan-font@v3.0.0/dist/woff/IRANYekanWebMedium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/iranyekan-font@v3.0.0/dist/woff2/IRANYekanWebBold.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/rastikerdar/iranyekan-font@v3.0.0/dist/woff/IRANYekanWebBold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  font-style: normal;
+  font-weight: 800;
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/iranyekan-font@v3.0.0/dist/woff2/IRANYekanWebExtraBold.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/rastikerdar/iranyekan-font@v3.0.0/dist/woff/IRANYekanWebExtraBold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/iranyekan-font@v3.0.0/dist/woff2/IRANYekanWebBlack.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/rastikerdar/iranyekan-font@v3.0.0/dist/woff/IRANYekanWebBlack.woff') format('woff');
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --font-primary: 'IRANYekan', 'IranYekan', 'IRANSansX', 'Vazirmatn', 'Dana', 'Segoe UI', Tahoma, sans-serif;
+  }
+  
+  html, body {
+    font-family: var(--font-primary) !important;
+    scroll-behavior: smooth;
+    letter-spacing: -0.015em;
+  }
+
+  button, input, select, textarea, optgroup, option {
+    font-family: var(--font-primary) !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(30, 41, 59, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-subtle {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Smooth transitions */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
